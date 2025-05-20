@@ -69,6 +69,8 @@ nav h2 {
     padding: 0;
 }
 
+/* note that i'm not adding more properties to the nav element itself i'm adding them to its children */
+
 nav .section {
     background-color: rgb(12, 0, 255);
     display: flex;
@@ -126,7 +128,7 @@ nav .section {
     border-radius: 1px;
 }
 
-#main_container {
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,6 +152,20 @@ nav .section {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.section_gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.section_gallery img {
+    /* background-color: rgb(230, 230, 230); */
 }
 
 .section_subdiv {
