@@ -154,6 +154,10 @@ main {
     margin-bottom: 10px;
 }
 
+.section_div ul {
+    list-style-type: square;
+}
+
 .section_gallery {
     display: flex;
     flex-direction: row;
