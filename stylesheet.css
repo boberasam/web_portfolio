@@ -44,15 +44,14 @@ body {
 
 nav {
     position: fixed;
-    display: grid;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    grid-template-columns: 25% 75%;
 
     width: 100%;
     height: 50px;
-    top: 0%;
+    top: 0;
     left: 0;
 
     background-color: rgb(12, 0, 255);
@@ -67,6 +66,11 @@ nav h2 {
 
     margin: 0;
     padding: 0;
+}
+
+nav h2 a {
+    text-decoration: none;
+    color: white;
 }
 
 /* note that i'm not adding more properties to the nav element itself i'm adding them to its children */
@@ -90,11 +94,14 @@ nav .section {
 
     border-radius: 10px;
 
-    display: flex;
+    display: block;
 
     margin: 0 10px;
-    padding-top: .3em;
-    padding-bottom: .3em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+
+    padding-left: 1em;
+    padding-right: 1em;
 
     text-align: center;
     vertical-align: center;
@@ -102,30 +109,44 @@ nav .section {
     color: white;
     font-size: 1.1em;
     font-weight: 500;
-    transition: padding-left 1s, background-color .25s, padding-right 1s, box-shadow 1s;
+    transition: padding-bottom 1s, padding-top 1s,padding-left 1s, padding-right 1s, background-color .7s, box-shadow .5s;
 }
 
 .navbar_item a {
     text-decoration: none;
     color: white;
+    display: block;
 }
 
 .navbar_item:hover {
-    padding-left: 2em;
-    padding-right: 2em;
-    background-color: rgba(30, 0, 255, 0.328);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    /* background-color: rgb(255, 169, 83); */
+    padding-top: .4em;
+    padding-bottom: .4em;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 /* so proud of this transition */
 
 #navbar_logo {
+    display: flex;
     width: 40px;
     height: 40px;
     max-height: fit-content;
     max-width: fit-content;
     /* background-color: white; */
     border-radius: 1px;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    /* border-width: 5px;
+    border-color: red;
+    border-style: solid; */
+}
+
+a #navbar_logo {
+    align-items: center;
+    justify-content: center;
 }
 
 main {
@@ -137,13 +158,13 @@ main {
     width: 100%;
     height: 100%;
     margin: 0px auto;
-    margin-top: 65px;
+    margin-top: 60px;
 }
 
 .section_div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 
     width: 1024px;
     height: 100%;
@@ -159,17 +180,30 @@ main {
 }
 
 .section_gallery {
+    background-color: rgb(240, 240, 240);
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    width: 100%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 95%;
     height: 100%;
+    justify-content: space-between;
 }
 
 .section_gallery img {
-    /* background-color: rgb(230, 230, 230); */
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 200px;
+    margin: 10px;
+    object-fit: scale-down;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .section_subdiv {
@@ -186,6 +220,8 @@ main {
 
 .section_div_line {
     display: flex;
+    align-content: center;
+    align-self: center;
     width: 95%;
     height: 3px;
     background-color: rgb(12, 0, 255);

@@ -12,6 +12,23 @@ const quotes = [
     "Yoda said 'Do or do not, there is no try.' I tried, but I still hit my son with the car.",
     "We have lost the plot.",
     "There are 3 ways to solve a problem: 1) Do it yourself, 2) Hire someone else to do it, 3) Complain about it on the internet.",
+    "https://www.youtube.com/watch?v=umVxHoj6TSE",
+    "Can you help me fix this?",
+    "I need a new car.",
+    "I need a new son.",
+    "Reeses are better than M&Ms.",
+    "Buy my memecoin.",
+    "'But open-source is better!' they said. 'It will never die!' they said.",
+    "For the last time, I did not hit my son with my car on purpose. It was an accident, and I am deeply sorry for it.",
+    "This sucks.",
+    "Reload the damn page!",
+    "Bread and butter is the way of life.",
+    "My name is Edwin. I made the mimic.",
+    "House.",
+    "Road House.",
+    "Yikmcbk blghfhghhghhghhhghhhhh. Carol, I hit my son with my car accidentally.",
+    "Linux, mmmmmmmmmm.",
+    "And I just WONDER where you could get an OS that runs on even a potato and has the ultimate amount of customization, minimal bloat but takes 6 hours in the command line to install a simple program. It's Arch. I'm talking about Arch.",
 ];
 
 function generate_quote() {
