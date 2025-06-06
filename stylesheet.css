@@ -3,19 +3,6 @@ body {
     font-family: Sarpanch, Bagadek, Kazmann Sans, Verdana, sans-serif;
 }
 
-#full_overlay {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
 .mild_shadow {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -73,6 +60,16 @@ nav h2 a {
     color: white;
 }
 
+#nav_scroll_meter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+}
+
 /* note that i'm not adding more properties to the nav element itself i'm adding them to its children */
 
 nav .section {
@@ -81,7 +78,7 @@ nav .section {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 100%;
+    max-height: 100%;
 }
 
 /* future me fix this causing navbar problems because i'm converting the p's into a ul for the navbar ^^^^ */
@@ -125,12 +122,20 @@ nav .section {
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
+.navbar_item:active {
+    color: black;
+    background-color: white;
+}
+
+.navbar_item:active a {
+    color: black;
+}
+
 /* so proud of this transition */
 
 #navbar_logo {
     display: flex;
     width: 40px;
-    height: 40px;
     max-height: fit-content;
     max-width: fit-content;
     /* background-color: white; */
@@ -167,7 +172,7 @@ main {
     align-items: left;
 
     width: 1024px;
-    height: 100%;
+    max-height: 100%;
 
     padding: 0;
     background-color: rgb(255, 255, 255);
@@ -204,30 +209,51 @@ main {
 
 .section_gallery_item p {
     background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5%;
 }
 
 .section_gallery img {
-    display: inline-block;
     max-width: 100%;
-    object-fit: scale-down;
-    width: 100%;
+    max-height: 100%;
     border-radius: 10px;
+    display: inline-block;
+    object-fit: scale-down;
+    image-rendering: optimizeSpeed;
 }
 
+
 .section_gallery_caption {
+    max-width: 100%;
+    max-height: 100%;
+
     font-size: 30px;
     font-weight: normal;
     color: rgb(0, 0, 0);
     text-align: center;
+    padding: 10px;
+    background-color: white;
 
     align-self: center;
     justify-self: center;
-    margin: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-left: 10%;
-    padding-right: 10%;
     border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .section_gallery_caption {
+        font-size: 1.2em;
+    }
+    .section_gallery img {
+        max-height: 120px;
+    }
+}
+@media (max-width: 500px) {
+    .section_gallery_caption {
+        font-size: 1em;
+    }
+    .section_gallery img {
+        max-height: 80px;
+    }
 }
 
 .section_gallery_caption b {
